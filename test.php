@@ -2,6 +2,7 @@
 
 <?php
 if(isset($_GET["fileid"])) {
+
 	define(PATH_UPLOAD,'tests');
 	$files = array();
 	$k = 1;
@@ -59,9 +60,8 @@ if(isset($_GET["fileid"])) {
 		<?php
 
 	} else {
-		?>
-		<p style="color:red">Файл не найден</p>
-		<?php
+		header("HTTP/1.0 404 Not Found");
+		echo '404 Not Found';
 	}
 
 }else{
