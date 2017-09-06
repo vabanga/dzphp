@@ -8,7 +8,7 @@ if(isset($_POST['userSub'])){
 	if(!empty($_POST['userName'])){
 		$n = $_POST['userName'];
 		echo 'Привет, '.$_POST['userName'].' выбери тест';
-		define(PATH_UPLOAD,'tests');
+		define('PATH_UPLOAD','tests');
 		$files = array();
 		$k = 1;
 		foreach (glob(PATH_UPLOAD."/*.json") as $filename) {

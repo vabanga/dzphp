@@ -1,9 +1,9 @@
 <?php
 
 if($_FILES['userfile']){
-	$des = 'C:/OpenServer/domains/dzphp/tests/';
+	$des = 'tests/';
 	$file = $_FILES['userfile'];
-	define(PATH_UPLOAD,'tests');
+	define('PATH_UPLOAD','tests');
 	$ext = explode(".", $file['name']);
 	$uploadfile = $des . basename($_FILES['userfile']['name']);
 	if($ext[1]=='json'){
