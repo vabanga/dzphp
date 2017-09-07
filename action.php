@@ -8,7 +8,7 @@ if($_FILES['userfile']){
 	$uploadfile = $des . basename($_FILES['userfile']['name']);
 	if($ext[1]=='json'){
 		move_uploaded_file($file["tmp_name"],$uploadfile);
-		echo"Файл отправлен";
+        header('Location: list.php');
 	}else{
 		echo"Файл НЕ отправлен";
 	}
